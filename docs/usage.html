@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RUKS Data</title>
+<title>Usage – RUKS Data</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -93,11 +128,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./usage.html"> 
+    <a class="nav-link active" href="./usage.html" aria-current="page"> 
 <span class="menu-text">Usage</span></a>
   </li>  
   <li class="nav-item">
@@ -125,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">RUKS Data</h1>
+<h1 class="title">Usage</h1>
 </div>
 
 
@@ -142,68 +177,171 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This site publishes open, reusable outputs derived from the Danish RUKS workbook.</p>
-<section id="what-you-get" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-get">What You Get</h2>
-<ul>
-<li>A reproducible transformation of the <code>Hovedresultater</code> sheet.</li>
-<li>Release-ready artifacts for SQLite, Parquet, and long-format CSV.</li>
-<li>Lightweight JSON for browsing the latest release on GitHub Pages.</li>
-<li>Manifests and release history tracked in Git.</li>
-</ul>
-</section>
-<section id="latest-release" class="level2">
-<h2 class="anchored" data-anchor-id="latest-release">Latest Release</h2>
-<p>The summary below is filled from the generated <code>site/data/latest-summary.json</code> file after the update workflow runs.</p>
-<div id="latest-release" class="summary-card">
+<p>This page shows a few small, practical ways to use the published outputs.</p>
+<section id="download-the-current-release" class="level2">
+<h2 class="anchored" data-anchor-id="download-the-current-release">Download The Current Release</h2>
+<p>The links below are constructed from the latest generated release tag. They point to the release assets produced by the workflow.</p>
+<div id="download-links" class="summary-card">
 <p>
-Run the workflow once to populate the latest-release panel.
+Latest release links will appear here after the page loads.
 </p>
 </div>
 </section>
-<section id="outputs" class="level2">
-<h2 class="anchored" data-anchor-id="outputs">Outputs</h2>
-<ul>
-<li>Git-tracked metadata: <code>data/manifests/*.json</code> and <code>data/history/releases.csv</code></li>
-<li>Site data: <code>site/data/latest-summary.json</code></li>
-<li>Release assets: long CSV, Parquet, and SQLite snapshots attached to GitHub Releases</li>
-</ul>
+<section id="example-read-the-long-csv-in-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="example-read-the-long-csv-in-pandas">Example: Read The Long CSV In Pandas</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>release_tag <span class="op">=</span> <span class="st">"ruks-2025-11-28"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date_part <span class="op">=</span> release_tag.replace(<span class="st">"ruks-"</span>, <span class="st">""</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://github.com/steenhulthin/ruks-data/releases/download/"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>release_tag<span class="sc">}</span><span class="ss">/ruks_hovedresultater_long-</span><span class="sc">{</span>date_part<span class="sc">}</span><span class="ss">.csv.gz"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>asthma <span class="op">=</span> df[</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"disease_label"</span>] <span class="op">==</span> <span class="st">"astma"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"measure_code"</span>] <span class="op">==</span> <span class="st">"incidence"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"geo_level"</span>] <span class="op">==</span> <span class="st">"country"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"sex_code"</span>] <span class="op">==</span> <span class="st">"both"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"age_group_code"</span>] <span class="op">==</span> <span class="st">"alle-aldre"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"value_kind"</span>] <span class="op">==</span> <span class="st">"count"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(asthma[[<span class="st">"year"</span>, <span class="st">"value"</span>]].head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="using-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="using-the-data">Using The Data</h2>
-<p>The site now includes a dedicated usage page with copy-pasteable examples for Python and a small static preview built from the generated summary JSON:</p>
-<ul>
-<li><a href="./usage.html">Usage</a></li>
-</ul>
+<section id="example-query-the-sqlite-snapshot" class="level2">
+<h2 class="anchored" data-anchor-id="example-query-the-sqlite-snapshot">Example: Query The SQLite Snapshot</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"ruks-2025-11-28.sqlite"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">select</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">  f.year,</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">  f.value</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">from fact_observation f</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">join dim_disease d on d.disease_id = f.disease_id</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">join dim_measure m on m.measure_id = f.measure_id</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">join dim_geography g on g.geography_id = f.geography_id</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">join dim_sex s on s.sex_id = f.sex_id</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">join dim_age_group a on a.age_group_id = f.age_group_id</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">join dim_unit u on u.unit_id = f.unit_id</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="st">where d.disease_slug = 'astma'</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="st">  and m.measure_code = 'incidence'</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="st">  and g.geo_level = 'country'</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="st">  and s.sex_code = 'both'</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="st">  and a.age_group_code = 'alle-aldre'</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="st">  and u.unit_code = 'count__persons__none'</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="st">order by f.year</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql_query(sql, conn)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="notes-on-missing-values" class="level2">
-<h2 class="anchored" data-anchor-id="notes-on-missing-values">Notes On Missing Values</h2>
-<p>This publication contains many blank cells in small geographic and demographic slices. The current pipeline preserves those blanks as missing values rather than forcing <code>0</code>. We expect that at least part of this pattern reflects disclosure control for small cells, but that interpretation should be verified against the source publication and related documentation.</p>
+<section id="example-static-site-preview" class="level2">
+<h2 class="anchored" data-anchor-id="example-static-site-preview">Example: Static-Site Preview</h2>
+<p>Because the site is static, it does not load the full dataset into the browser. Instead, it uses a small generated JSON summary. The table below is rendered in the browser from <code>site/data/latest-summary.json</code> and shows national asthma incidence counts and rates.</p>
+<div id="series-preview" class="summary-card">
+<p>
+Example series preview will appear here after the page loads.
+</p>
+</div>
 <script>
-async function renderLatestRelease() {
-  const target = document.getElementById("latest-release");
-  try {
-    const response = await fetch("site/data/latest-summary.json");
-    if (!response.ok) {
-      throw new Error("No generated summary yet");
-    }
-    const data = await response.json();
-    const diseaseItems = data.diseases.map((disease) => `<li>${disease}</li>`).join("");
-    target.innerHTML = `
-      <h3>${data.workbook_title}</h3>
-      <p><strong>Source release:</strong> ${data.source_release_date}</p>
-      <p><strong>Rows in Hovedresultater:</strong> ${data.source_row_count.toLocaleString()}</p>
-      <p><strong>Observed year-values:</strong> ${data.observation_count.toLocaleString()}</p>
-      <p><strong>Release tag:</strong> <code>${data.release_tag}</code></p>
-      <p><strong>Diseases covered:</strong></p>
-      <ul>${diseaseItems}</ul>
-    `;
-  } catch (error) {
-    target.innerHTML = "<p>Latest generated summary is not available yet.</p>";
-  }
+function buildAssetLinks(data) {
+  const base = `https://github.com/steenhulthin/ruks-data/releases/download/${data.release_tag}`;
+  const datePart = data.release_tag.replace("ruks-", "");
+  return [
+    {
+      label: "Long CSV (.csv.gz)",
+      url: `${base}/ruks_hovedresultater_long-${datePart}.csv.gz`,
+    },
+    {
+      label: "Long Parquet (.parquet)",
+      url: `${base}/ruks_hovedresultater_long-${datePart}.parquet`,
+    },
+    {
+      label: "SQLite (.sqlite)",
+      url: `${base}/ruks-${datePart}.sqlite`,
+    },
+  ];
 }
 
-renderLatestRelease();
+function renderDownloads(data) {
+  const target = document.getElementById("download-links");
+  const links = buildAssetLinks(data)
+    .map((file) => `<li><a href="${file.url}">${file.label}</a></li>`)
+    .join("");
+
+  target.innerHTML = `
+    <h3>${data.workbook_title}</h3>
+    <p><strong>Release:</strong> <code>${data.release_tag}</code></p>
+    <ul>${links}</ul>
+  `;
+}
+
+function renderSeriesPreview(data) {
+  const target = document.getElementById("series-preview");
+  const countSeries = data.series.find(
+    (series) =>
+      series.disease === "astma" &&
+      series.measure_code === "incidence" &&
+      series.value_kind === "count"
+  );
+  const rateSeries = data.series.find(
+    (series) =>
+      series.disease === "astma" &&
+      series.measure_code === "incidence" &&
+      series.value_kind === "rate"
+  );
+
+  if (!countSeries || !rateSeries) {
+    target.innerHTML = "<p>Expected asthma incidence preview series were not found.</p>";
+    return;
+  }
+
+  const rows = countSeries.values.map((point, index) => {
+    const rate = rateSeries.values[index];
+    return `
+      <tr>
+        <td>${point.year}</td>
+        <td>${point.value.toLocaleString()}</td>
+        <td>${rate ? rate.value.toLocaleString() : ""}</td>
+      </tr>
+    `;
+  }).join("");
+
+  target.innerHTML = `
+    <h3>National Asthma Incidence</h3>
+    <p>This preview is rendered from the generated summary JSON served with the static site.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Count</th>
+          <th>Rate per 100,000</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+async function initUsagePage() {
+  const response = await fetch("site/data/latest-summary.json");
+  const data = await response.json();
+  renderDownloads(data);
+  renderSeriesPreview(data);
+}
+
+initUsagePage().catch(() => {
+  document.getElementById("download-links").innerHTML =
+    "<p>Latest release links are not available yet.</p>";
+  document.getElementById("series-preview").innerHTML =
+    "<p>Example series preview is not available yet.</p>";
+});
 </script>
 
 

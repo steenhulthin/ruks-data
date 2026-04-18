@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - usage.qmd
     - methodology.qmd
     - credits.qmd
   resources:
@@ -14,6 +15,8 @@ website:
     left:
       - href: index.qmd
         text: Overview
+      - href: usage.qmd
+        text: Usage
       - href: methodology.qmd
         text: Methodology
       - href: credits.qmd

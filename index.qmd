@@ -25,6 +25,12 @@ The summary below is filled from the generated `site/data/latest-summary.json` f
 - Site data: `site/data/latest-summary.json`
 - Release assets: long CSV, Parquet, and SQLite snapshots attached to GitHub Releases
 
+## Using The Data
+
+The site now includes a dedicated usage page with copy-pasteable examples for Python and a small static preview built from the generated summary JSON:
+
+- [Usage](usage.qmd)
+
 ## Notes On Missing Values
 
 This publication contains many blank cells in small geographic and demographic slices. The current pipeline preserves those blanks as missing values rather than forcing `0`. We expect that at least part of this pattern reflects disclosure control for small cells, but that interpretation should be verified against the source publication and related documentation.
@@ -55,4 +61,3 @@ async function renderLatestRelease() {
 
 renderLatestRelease();
 </script>
-

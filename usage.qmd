@@ -1,0 +1,174 @@
+---
+title: "Usage"
+---
+
+This page shows a few small, practical ways to use the published outputs.
+
+## Download The Current Release
+
+The links below are constructed from the latest generated release tag. They point to the release assets produced by the workflow.
+
+<div id="download-links" class="summary-card">
+  <p>Latest release links will appear here after the page loads.</p>
+</div>
+
+## Example: Read The Long CSV In Pandas
+
+```python
+import pandas as pd
+
+release_tag = "ruks-2025-11-28"
+date_part = release_tag.replace("ruks-", "")
+url = (
+    "https://github.com/steenhulthin/ruks-data/releases/download/"
+    f"{release_tag}/ruks_hovedresultater_long-{date_part}.csv.gz"
+)
+
+df = pd.read_csv(url)
+
+asthma = df[
+    (df["disease_label"] == "astma")
+    & (df["measure_code"] == "incidence")
+    & (df["geo_level"] == "country")
+    & (df["sex_code"] == "both")
+    & (df["age_group_code"] == "alle-aldre")
+    & (df["value_kind"] == "count")
+]
+
+print(asthma[["year", "value"]].head())
+```
+
+## Example: Query The SQLite Snapshot
+
+```python
+import sqlite3
+import pandas as pd
+
+conn = sqlite3.connect("ruks-2025-11-28.sqlite")
+
+sql = """
+select
+  f.year,
+  f.value
+from fact_observation f
+join dim_disease d on d.disease_id = f.disease_id
+join dim_measure m on m.measure_id = f.measure_id
+join dim_geography g on g.geography_id = f.geography_id
+join dim_sex s on s.sex_id = f.sex_id
+join dim_age_group a on a.age_group_id = f.age_group_id
+join dim_unit u on u.unit_id = f.unit_id
+where d.disease_slug = 'astma'
+  and m.measure_code = 'incidence'
+  and g.geo_level = 'country'
+  and s.sex_code = 'both'
+  and a.age_group_code = 'alle-aldre'
+  and u.unit_code = 'count__persons__none'
+order by f.year
+"""
+
+df = pd.read_sql_query(sql, conn)
+print(df)
+```
+
+## Example: Static-Site Preview
+
+Because the site is static, it does not load the full dataset into the browser. Instead, it uses a small generated JSON summary. The table below is rendered in the browser from `site/data/latest-summary.json` and shows national asthma incidence counts and rates.
+
+<div id="series-preview" class="summary-card">
+  <p>Example series preview will appear here after the page loads.</p>
+</div>
+
+<script>
+function buildAssetLinks(data) {
+  const base = `https://github.com/steenhulthin/ruks-data/releases/download/${data.release_tag}`;
+  const datePart = data.release_tag.replace("ruks-", "");
+  return [
+    {
+      label: "Long CSV (.csv.gz)",
+      url: `${base}/ruks_hovedresultater_long-${datePart}.csv.gz`,
+    },
+    {
+      label: "Long Parquet (.parquet)",
+      url: `${base}/ruks_hovedresultater_long-${datePart}.parquet`,
+    },
+    {
+      label: "SQLite (.sqlite)",
+      url: `${base}/ruks-${datePart}.sqlite`,
+    },
+  ];
+}
+
+function renderDownloads(data) {
+  const target = document.getElementById("download-links");
+  const links = buildAssetLinks(data)
+    .map((file) => `<li><a href="${file.url}">${file.label}</a></li>`)
+    .join("");
+
+  target.innerHTML = `
+    <h3>${data.workbook_title}</h3>
+    <p><strong>Release:</strong> <code>${data.release_tag}</code></p>
+    <ul>${links}</ul>
+  `;
+}
+
+function renderSeriesPreview(data) {
+  const target = document.getElementById("series-preview");
+  const countSeries = data.series.find(
+    (series) =>
+      series.disease === "astma" &&
+      series.measure_code === "incidence" &&
+      series.value_kind === "count"
+  );
+  const rateSeries = data.series.find(
+    (series) =>
+      series.disease === "astma" &&
+      series.measure_code === "incidence" &&
+      series.value_kind === "rate"
+  );
+
+  if (!countSeries || !rateSeries) {
+    target.innerHTML = "<p>Expected asthma incidence preview series were not found.</p>";
+    return;
+  }
+
+  const rows = countSeries.values.map((point, index) => {
+    const rate = rateSeries.values[index];
+    return `
+      <tr>
+        <td>${point.year}</td>
+        <td>${point.value.toLocaleString()}</td>
+        <td>${rate ? rate.value.toLocaleString() : ""}</td>
+      </tr>
+    `;
+  }).join("");
+
+  target.innerHTML = `
+    <h3>National Asthma Incidence</h3>
+    <p>This preview is rendered from the generated summary JSON served with the static site.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Count</th>
+          <th>Rate per 100,000</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+async function initUsagePage() {
+  const response = await fetch("site/data/latest-summary.json");
+  const data = await response.json();
+  renderDownloads(data);
+  renderSeriesPreview(data);
+}
+
+initUsagePage().catch(() => {
+  document.getElementById("download-links").innerHTML =
+    "<p>Latest release links are not available yet.</p>";
+  document.getElementById("series-preview").innerHTML =
+    "<p>Example series preview is not available yet.</p>";
+});
+</script>

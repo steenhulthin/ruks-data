@@ -78,6 +78,7 @@ def run_data_checks(repo_root: Path) -> None:
 def run_site_checks(repo_root: Path) -> None:
     docs_root = repo_root / "docs"
     require((docs_root / "index.html").exists(), "Rendered index.html is missing")
+    require((docs_root / "usage.html").exists(), "Rendered usage.html is missing")
     require((docs_root / "methodology.html").exists(), "Rendered methodology.html is missing")
     require((docs_root / "credits.html").exists(), "Rendered credits.html is missing")
     require((docs_root / "site" / "data" / "latest-summary.json").exists(), "Rendered site data JSON is missing")

@@ -21,6 +21,41 @@
     "text": "Project Note\nThis repository republishes transformed public data and documentation to make the source easier to use. It is an independent open-source project and is not an official Sundhedsdatastyrelsen publication."
   },
   {
+    "objectID": "usage.html",
+    "href": "usage.html",
+    "title": "Usage",
+    "section": "",
+    "text": "This page shows a few small, practical ways to use the published outputs."
+  },
+  {
+    "objectID": "usage.html#download-the-current-release",
+    "href": "usage.html#download-the-current-release",
+    "title": "Usage",
+    "section": "Download The Current Release",
+    "text": "Download The Current Release\nThe links below are constructed from the latest generated release tag. They point to the release assets produced by the workflow.\n\n\nLatest release links will appear here after the page loads."
+  },
+  {
+    "objectID": "usage.html#example-read-the-long-csv-in-pandas",
+    "href": "usage.html#example-read-the-long-csv-in-pandas",
+    "title": "Usage",
+    "section": "Example: Read The Long CSV In Pandas",
+    "text": "Example: Read The Long CSV In Pandas\nimport pandas as pd\n\nrelease_tag = \"ruks-2025-11-28\"\ndate_part = release_tag.replace(\"ruks-\", \"\")\nurl = (\n    \"https://github.com/steenhulthin/ruks-data/releases/download/\"\n    f\"{release_tag}/ruks_hovedresultater_long-{date_part}.csv.gz\"\n)\n\ndf = pd.read_csv(url)\n\nasthma = df[\n    (df[\"disease_label\"] == \"astma\")\n    & (df[\"measure_code\"] == \"incidence\")\n    & (df[\"geo_level\"] == \"country\")\n    & (df[\"sex_code\"] == \"both\")\n    & (df[\"age_group_code\"] == \"alle-aldre\")\n    & (df[\"value_kind\"] == \"count\")\n]\n\nprint(asthma[[\"year\", \"value\"]].head())"
+  },
+  {
+    "objectID": "usage.html#example-query-the-sqlite-snapshot",
+    "href": "usage.html#example-query-the-sqlite-snapshot",
+    "title": "Usage",
+    "section": "Example: Query The SQLite Snapshot",
+    "text": "Example: Query The SQLite Snapshot\nimport sqlite3\nimport pandas as pd\n\nconn = sqlite3.connect(\"ruks-2025-11-28.sqlite\")\n\nsql = \"\"\"\nselect\n  f.year,\n  f.value\nfrom fact_observation f\njoin dim_disease d on d.disease_id = f.disease_id\njoin dim_measure m on m.measure_id = f.measure_id\njoin dim_geography g on g.geography_id = f.geography_id\njoin dim_sex s on s.sex_id = f.sex_id\njoin dim_age_group a on a.age_group_id = f.age_group_id\njoin dim_unit u on u.unit_id = f.unit_id\nwhere d.disease_slug = 'astma'\n  and m.measure_code = 'incidence'\n  and g.geo_level = 'country'\n  and s.sex_code = 'both'\n  and a.age_group_code = 'alle-aldre'\n  and u.unit_code = 'count__persons__none'\norder by f.year\n\"\"\"\n\ndf = pd.read_sql_query(sql, conn)\nprint(df)"
+  },
+  {
+    "objectID": "usage.html#example-static-site-preview",
+    "href": "usage.html#example-static-site-preview",
+    "title": "Usage",
+    "section": "Example: Static-Site Preview",
+    "text": "Example: Static-Site Preview\nBecause the site is static, it does not load the full dataset into the browser. Instead, it uses a small generated JSON summary. The table below is rendered in the browser from site/data/latest-summary.json and shows national asthma incidence counts and rates.\n\n\nExample series preview will appear here after the page loads."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "RUKS Data",
@@ -47,6 +82,13 @@
     "title": "RUKS Data",
     "section": "Outputs",
     "text": "Outputs\n\nGit-tracked metadata: data/manifests/*.json and data/history/releases.csv\nSite data: site/data/latest-summary.json\nRelease assets: long CSV, Parquet, and SQLite snapshots attached to GitHub Releases"
+  },
+  {
+    "objectID": "index.html#using-the-data",
+    "href": "index.html#using-the-data",
+    "title": "RUKS Data",
+    "section": "Using The Data",
+    "text": "Using The Data\nThe site now includes a dedicated usage page with copy-pasteable examples for Python and a small static preview built from the generated summary JSON:\n\nUsage"
   },
   {
     "objectID": "index.html#notes-on-missing-values",

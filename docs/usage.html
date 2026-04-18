@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-11e654f069ceca6601e7038be5bafdcb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -191,32 +191,30 @@ Latest release links will appear here after the page loads.
 <h2 class="anchored" data-anchor-id="example-read-the-long-csv-in-pandas">Example: Read The Long CSV In Pandas</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>release_tag <span class="op">=</span> <span class="st">"ruks-2025-11-28"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date_part <span class="op">=</span> release_tag.replace(<span class="st">"ruks-"</span>, <span class="st">""</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://github.com/steenhulthin/ruks-data/releases/download/"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>release_tag<span class="sc">}</span><span class="ss">/ruks_hovedresultater_long-</span><span class="sc">{</span>date_part<span class="sc">}</span><span class="ss">.csv.gz"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://github.com/steenhulthin/ruks-data/releases/latest/download/"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ruks_hovedresultater_long.csv.gz"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>asthma <span class="op">=</span> df[</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"disease_label"</span>] <span class="op">==</span> <span class="st">"astma"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"measure_code"</span>] <span class="op">==</span> <span class="st">"incidence"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"geo_level"</span>] <span class="op">==</span> <span class="st">"country"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"sex_code"</span>] <span class="op">==</span> <span class="st">"both"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"age_group_code"</span>] <span class="op">==</span> <span class="st">"alle-aldre"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"value_kind"</span>] <span class="op">==</span> <span class="st">"count"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(asthma[[<span class="st">"year"</span>, <span class="st">"value"</span>]].head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>asthma <span class="op">=</span> df[</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    (df[<span class="st">"disease_label"</span>] <span class="op">==</span> <span class="st">"astma"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"measure_code"</span>] <span class="op">==</span> <span class="st">"incidence"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"geo_level"</span>] <span class="op">==</span> <span class="st">"country"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"sex_code"</span>] <span class="op">==</span> <span class="st">"both"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"age_group_code"</span>] <span class="op">==</span> <span class="st">"alle-aldre"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span> (df[<span class="st">"value_kind"</span>] <span class="op">==</span> <span class="st">"count"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(asthma[[<span class="st">"year"</span>, <span class="st">"value"</span>]].head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="example-query-the-sqlite-snapshot" class="level2">
 <h2 class="anchored" data-anchor-id="example-query-the-sqlite-snapshot">Example: Query The SQLite Snapshot</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"ruks-2025-11-28.sqlite"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"ruks.sqlite"</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">"""</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">select</span></span>
@@ -251,20 +249,33 @@ Example series preview will appear here after the page loads.
 </div>
 <script>
 function buildAssetLinks(data) {
-  const base = `https://github.com/steenhulthin/ruks-data/releases/download/${data.release_tag}`;
+  const latestBase = "https://github.com/steenhulthin/ruks-data/releases/latest/download";
+  const versionedBase = `https://github.com/steenhulthin/ruks-data/releases/download/${data.release_tag}`;
   const datePart = data.release_tag.replace("ruks-", "");
   return [
     {
-      label: "Long CSV (.csv.gz)",
-      url: `${base}/ruks_hovedresultater_long-${datePart}.csv.gz`,
+      label: "Latest long CSV (.csv.gz)",
+      url: `${latestBase}/ruks_hovedresultater_long.csv.gz`,
     },
     {
-      label: "Long Parquet (.parquet)",
-      url: `${base}/ruks_hovedresultater_long-${datePart}.parquet`,
+      label: "Latest long Parquet (.parquet)",
+      url: `${latestBase}/ruks_hovedresultater_long.parquet`,
     },
     {
-      label: "SQLite (.sqlite)",
-      url: `${base}/ruks-${datePart}.sqlite`,
+      label: "Latest SQLite (.sqlite)",
+      url: `${latestBase}/ruks.sqlite`,
+    },
+    {
+      label: "Versioned long CSV (.csv.gz)",
+      url: `${versionedBase}/ruks_hovedresultater_long-${datePart}.csv.gz`,
+    },
+    {
+      label: "Versioned long Parquet (.parquet)",
+      url: `${versionedBase}/ruks_hovedresultater_long-${datePart}.parquet`,
+    },
+    {
+      label: "Versioned SQLite (.sqlite)",
+      url: `${versionedBase}/ruks-${datePart}.sqlite`,
     },
   ];
 }

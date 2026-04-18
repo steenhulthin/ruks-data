@@ -5,7 +5,7 @@
   "department": "ASØ",
   "source_url": "https://cdn1.gopublic.dk/sundhedsdatastyrelsen/Media/638999138200017589/Register%20for%20Udvalgte%20Kroniske%20Sygdomme%20og%20Sv%C3%A6re%20Psykiske%20Lidelser%20(RUKS)%202010-2025%20(udgivet%2028.%20november%202025).XLSX",
   "source_sha256": "32df7b72adbef66734df2f8e56f4f1a14edee21546abefd9b90d0f0de3555576",
-  "downloaded_at_utc": "2026-04-18T10:05:17+00:00",
+  "downloaded_at_utc": "2026-04-18T12:32:14+00:00",
   "source_sheet": "Hovedresultater",
   "source_row_count": 187639,
   "observation_count": 2432172,
@@ -18,5 +18,10 @@
     "ruks_hovedresultater_long-2025-11-28.csv.gz",
     "ruks_hovedresultater_long-2025-11-28.parquet",
     "ruks-2025-11-28.sqlite"
+  ],
+  "latest_artifacts": [
+    "ruks_hovedresultater_long.csv.gz",
+    "ruks_hovedresultater_long.parquet",
+    "ruks.sqlite"
   ]
 }

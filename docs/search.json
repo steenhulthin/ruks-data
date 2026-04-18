@@ -39,14 +39,14 @@
     "href": "usage.html#example-read-the-long-csv-in-pandas",
     "title": "Usage",
     "section": "Example: Read The Long CSV In Pandas",
-    "text": "Example: Read The Long CSV In Pandas\nimport pandas as pd\n\nrelease_tag = \"ruks-2025-11-28\"\ndate_part = release_tag.replace(\"ruks-\", \"\")\nurl = (\n    \"https://github.com/steenhulthin/ruks-data/releases/download/\"\n    f\"{release_tag}/ruks_hovedresultater_long-{date_part}.csv.gz\"\n)\n\ndf = pd.read_csv(url)\n\nasthma = df[\n    (df[\"disease_label\"] == \"astma\")\n    & (df[\"measure_code\"] == \"incidence\")\n    & (df[\"geo_level\"] == \"country\")\n    & (df[\"sex_code\"] == \"both\")\n    & (df[\"age_group_code\"] == \"alle-aldre\")\n    & (df[\"value_kind\"] == \"count\")\n]\n\nprint(asthma[[\"year\", \"value\"]].head())"
+    "text": "Example: Read The Long CSV In Pandas\nimport pandas as pd\n\nurl = (\n    \"https://github.com/steenhulthin/ruks-data/releases/latest/download/\"\n    \"ruks_hovedresultater_long.csv.gz\"\n)\n\ndf = pd.read_csv(url)\n\nasthma = df[\n    (df[\"disease_label\"] == \"astma\")\n    & (df[\"measure_code\"] == \"incidence\")\n    & (df[\"geo_level\"] == \"country\")\n    & (df[\"sex_code\"] == \"both\")\n    & (df[\"age_group_code\"] == \"alle-aldre\")\n    & (df[\"value_kind\"] == \"count\")\n]\n\nprint(asthma[[\"year\", \"value\"]].head())"
   },
   {
     "objectID": "usage.html#example-query-the-sqlite-snapshot",
     "href": "usage.html#example-query-the-sqlite-snapshot",
     "title": "Usage",
     "section": "Example: Query The SQLite Snapshot",
-    "text": "Example: Query The SQLite Snapshot\nimport sqlite3\nimport pandas as pd\n\nconn = sqlite3.connect(\"ruks-2025-11-28.sqlite\")\n\nsql = \"\"\"\nselect\n  f.year,\n  f.value\nfrom fact_observation f\njoin dim_disease d on d.disease_id = f.disease_id\njoin dim_measure m on m.measure_id = f.measure_id\njoin dim_geography g on g.geography_id = f.geography_id\njoin dim_sex s on s.sex_id = f.sex_id\njoin dim_age_group a on a.age_group_id = f.age_group_id\njoin dim_unit u on u.unit_id = f.unit_id\nwhere d.disease_slug = 'astma'\n  and m.measure_code = 'incidence'\n  and g.geo_level = 'country'\n  and s.sex_code = 'both'\n  and a.age_group_code = 'alle-aldre'\n  and u.unit_code = 'count__persons__none'\norder by f.year\n\"\"\"\n\ndf = pd.read_sql_query(sql, conn)\nprint(df)"
+    "text": "Example: Query The SQLite Snapshot\nimport sqlite3\nimport pandas as pd\n\nconn = sqlite3.connect(\"ruks.sqlite\")\n\nsql = \"\"\"\nselect\n  f.year,\n  f.value\nfrom fact_observation f\njoin dim_disease d on d.disease_id = f.disease_id\njoin dim_measure m on m.measure_id = f.measure_id\njoin dim_geography g on g.geography_id = f.geography_id\njoin dim_sex s on s.sex_id = f.sex_id\njoin dim_age_group a on a.age_group_id = f.age_group_id\njoin dim_unit u on u.unit_id = f.unit_id\nwhere d.disease_slug = 'astma'\n  and m.measure_code = 'incidence'\n  and g.geo_level = 'country'\n  and s.sex_code = 'both'\n  and a.age_group_code = 'alle-aldre'\n  and u.unit_code = 'count__persons__none'\norder by f.year\n\"\"\"\n\ndf = pd.read_sql_query(sql, conn)\nprint(df)"
   },
   {
     "objectID": "usage.html#example-static-site-preview",

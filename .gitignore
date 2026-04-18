@@ -8,3 +8,6 @@ artifacts/
 downloads/
 dist/
 build/
+
+/.quarto/
+**/*.quarto_ipynb

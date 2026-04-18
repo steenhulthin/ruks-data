@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "TODO.html",
+    "href": "TODO.html",
+    "title": "TODO",
+    "section": "",
+    "text": "TODO\n\nInvestigate suppression / missing-value rules in the RUKS workbook and downstream publication.\nConfirm whether blank cells in Hovedresultater are due to disclosure control / diskretionering rather than true zeros or unavailable source data.\nDecide how suppressed values should be represented in outputs: NULL, explicit suppression flag, or a display label for website use.\nCheck whether the relevant explanation can be extracted from the workbook, or whether it should be documented from external Sundhedsdatastyrelsen guidance."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RUKS Data",
+    "section": "",
+    "text": "This site publishes open, reusable outputs derived from the Danish RUKS workbook."
+  },
+  {
+    "objectID": "index.html#what-you-get",
+    "href": "index.html#what-you-get",
+    "title": "RUKS Data",
+    "section": "What You Get",
+    "text": "What You Get\n\nA reproducible transformation of the Hovedresultater sheet.\nRelease-ready artifacts for SQLite, Parquet, and long-format CSV.\nLightweight JSON for browsing the latest release on GitHub Pages.\nManifests and release history tracked in Git."
+  },
+  {
+    "objectID": "index.html#latest-release",
+    "href": "index.html#latest-release",
+    "title": "RUKS Data",
+    "section": "Latest Release",
+    "text": "Latest Release\nThe summary below is filled from the generated site/data/latest-summary.json file after the update workflow runs.\n\n\nRun the workflow once to populate the latest-release panel."
+  },
+  {
+    "objectID": "index.html#outputs",
+    "href": "index.html#outputs",
+    "title": "RUKS Data",
+    "section": "Outputs",
+    "text": "Outputs\n\nGit-tracked metadata: data/manifests/*.json and data/history/releases.csv\nSite data: site/data/latest-summary.json\nRelease assets: long CSV, Parquet, and SQLite snapshots attached to GitHub Releases"
+  },
+  {
+    "objectID": "index.html#notes-on-missing-values",
+    "href": "index.html#notes-on-missing-values",
+    "title": "RUKS Data",
+    "section": "Notes On Missing Values",
+    "text": "Notes On Missing Values\nThis publication contains many blank cells in small geographic and demographic slices. The current pipeline preserves those blanks as missing values rather than forcing 0. We expect that at least part of this pattern reflects disclosure control for small cells, but that interpretation should be verified against the source publication and related documentation."
+  },
+  {
+    "objectID": "artifacts/releases/release_notes.html",
+    "href": "artifacts/releases/release_notes.html",
+    "title": "Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS), 2010-2025",
+    "section": "",
+    "text": "Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS), 2010-2025\n\nSource release date: 28. november 2025\nSource SHA-256: 32df7b72adbef66734df2f8e56f4f1a14edee21546abefd9b90d0f0de3555576\nRows in Hovedresultater: 187,639\nObserved year-values: 2,432,172\n\nAssets in this release:\n\nruks_hovedresultater_long-2025-11-28.csv.gz\nruks_hovedresultater_long-2025-11-28.parquet\nruks-2025-11-28.sqlite"
+  },
+  {
+    "objectID": "credits.html",
+    "href": "credits.html",
+    "title": "Credits",
+    "section": "",
+    "text": "Primary source workbook:\n\nRegister for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025\n\nPublisher:\n\nSundhedsdatastyrelsen\n\nRelated public guidance on small-cell suppression:\n\nBeskyttelse af sundhedsdata"
+  },
+  {
+    "objectID": "credits.html#source",
+    "href": "credits.html#source",
+    "title": "Credits",
+    "section": "",
+    "text": "Primary source workbook:\n\nRegister for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025\n\nPublisher:\n\nSundhedsdatastyrelsen\n\nRelated public guidance on small-cell suppression:\n\nBeskyttelse af sundhedsdata"
+  },
+  {
+    "objectID": "credits.html#project-note",
+    "href": "credits.html#project-note",
+    "title": "Credits",
+    "section": "Project Note",
+    "text": "Project Note\nThis repository republishes transformed public data and documentation to make the source easier to use. It is an independent open-source project and is not an official Sundhedsdatastyrelsen publication."
+  },
+  {
+    "objectID": "methodology.html",
+    "href": "methodology.html",
+    "title": "Methodology",
+    "section": "",
+    "text": "The current pipeline processes the Hovedresultater worksheet from the public RUKS workbook."
+  },
+  {
+    "objectID": "methodology.html#scope",
+    "href": "methodology.html#scope",
+    "title": "Methodology",
+    "section": "",
+    "text": "The current pipeline processes the Hovedresultater worksheet from the public RUKS workbook."
+  },
+  {
+    "objectID": "methodology.html#normalization",
+    "href": "methodology.html#normalization",
+    "title": "Methodology",
+    "section": "Normalization",
+    "text": "Normalization\nEach populated year cell becomes one observation in a long-format fact table with:\n\nmeasure\ndisease\ngeography level\nregion\nmunicipality\nsex\nage group\nvalue kind\nstandardization\nyear\nvalue"
+  },
+  {
+    "objectID": "methodology.html#missing-data",
+    "href": "methodology.html#missing-data",
+    "title": "Methodology",
+    "section": "Missing Data",
+    "text": "Missing Data\nBlank cells in the workbook are preserved as missing and are not coerced to 0."
+  },
+  {
+    "objectID": "methodology.html#publication-strategy",
+    "href": "methodology.html#publication-strategy",
+    "title": "Methodology",
+    "section": "Publication Strategy",
+    "text": "Publication Strategy\n\nsmall manifests and history logs are committed to Git\nlarge artifacts are produced in artifacts/ and intended for GitHub Releases\nthe Quarto site consumes small generated JSON summaries"
+  }
+]

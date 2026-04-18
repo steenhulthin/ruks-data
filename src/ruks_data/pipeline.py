@@ -327,6 +327,15 @@ def transform_hovedresultater(
     ]:
         ensure_parent(path)
 
+    # Recreate build outputs on each run so local reruns do not append to or
+    # conflict with partially generated artifacts from an earlier execution.
+    output_csv_temp.unlink(missing_ok=True)
+    output_csv_gz.unlink(missing_ok=True)
+    output_parquet.unlink(missing_ok=True)
+    output_sqlite.unlink(missing_ok=True)
+    output_sqlite.with_suffix(output_sqlite.suffix + "-shm").unlink(missing_ok=True)
+    output_sqlite.with_suffix(output_sqlite.suffix + "-wal").unlink(missing_ok=True)
+
     connection = sqlite3.connect(output_sqlite)
     create_sqlite_schema(connection)
 

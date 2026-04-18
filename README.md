@@ -62,6 +62,11 @@ uv run python scripts/run_pipeline.py
 quarto render
 ```
 
+`quarto render` requires a local Quarto installation. On Ubuntu, Quarto is typically not available as a standard `apt` package named `quarto`, so install it from the official Quarto downloads page or the official Linux tarball instructions:
+
+- https://quarto.org/docs/download/
+- https://quarto.org/docs/download/tarball.html
+
 ## Current scope
 
 Version 1 covers:
@@ -73,4 +78,3 @@ Version 1 covers:
 - a minimal Quarto-based publication site
 
 The workbook sheets `Dokumentation` and `Opmærksomhedspunkter` are not yet parsed into structured outputs.
-

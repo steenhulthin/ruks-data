@@ -1,0 +1,2684 @@
+{
+  "workbook_title": "Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS), 2010-2025",
+  "source_release_date": "28. november 2025",
+  "release_tag": "ruks-2025-11-28",
+  "diseases": [
+    "KOL",
+    "Type 1 - Diabetes",
+    "Type 2 - Diabetes",
+    "astma",
+    "demens",
+    "hjertesvigt",
+    "leddegigt",
+    "osteoporose",
+    "skizofreni"
+  ],
+  "series": [
+    {
+      "disease": "astma",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 35485.0
+        },
+        {
+          "year": 2011,
+          "value": 33690.0
+        },
+        {
+          "year": 2012,
+          "value": 32170.0
+        },
+        {
+          "year": 2013,
+          "value": 27510.0
+        },
+        {
+          "year": 2014,
+          "value": 28820.0
+        },
+        {
+          "year": 2015,
+          "value": 32495.0
+        },
+        {
+          "year": 2016,
+          "value": 31105.0
+        },
+        {
+          "year": 2017,
+          "value": 31025.0
+        },
+        {
+          "year": 2018,
+          "value": 29190.0
+        },
+        {
+          "year": 2019,
+          "value": 31890.0
+        },
+        {
+          "year": 2020,
+          "value": 31155.0
+        },
+        {
+          "year": 2021,
+          "value": 29735.0
+        },
+        {
+          "year": 2022,
+          "value": 31540.0
+        },
+        {
+          "year": 2023,
+          "value": 33565.0
+        },
+        {
+          "year": 2024,
+          "value": 34030.0
+        },
+        {
+          "year": 2025,
+          "value": 22540.0
+        }
+      ]
+    },
+    {
+      "disease": "astma",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 640.0
+        },
+        {
+          "year": 2011,
+          "value": 605.0
+        },
+        {
+          "year": 2012,
+          "value": 575.0
+        },
+        {
+          "year": 2013,
+          "value": 490.0
+        },
+        {
+          "year": 2014,
+          "value": 510.0
+        },
+        {
+          "year": 2015,
+          "value": 570.0
+        },
+        {
+          "year": 2016,
+          "value": 545.0
+        },
+        {
+          "year": 2017,
+          "value": 540.0
+        },
+        {
+          "year": 2018,
+          "value": 505.0
+        },
+        {
+          "year": 2019,
+          "value": 550.0
+        },
+        {
+          "year": 2020,
+          "value": 535.0
+        },
+        {
+          "year": 2021,
+          "value": 510.0
+        },
+        {
+          "year": 2022,
+          "value": 535.0
+        },
+        {
+          "year": 2023,
+          "value": 565.0
+        },
+        {
+          "year": 2024,
+          "value": 570.0
+        },
+        {
+          "year": 2025,
+          "value": 375.0
+        }
+      ]
+    },
+    {
+      "disease": "demens",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 9400.0
+        },
+        {
+          "year": 2011,
+          "value": 8875.0
+        },
+        {
+          "year": 2012,
+          "value": 8865.0
+        },
+        {
+          "year": 2013,
+          "value": 8835.0
+        },
+        {
+          "year": 2014,
+          "value": 9120.0
+        },
+        {
+          "year": 2015,
+          "value": 9375.0
+        },
+        {
+          "year": 2016,
+          "value": 9290.0
+        },
+        {
+          "year": 2017,
+          "value": 9155.0
+        },
+        {
+          "year": 2018,
+          "value": 8515.0
+        },
+        {
+          "year": 2019,
+          "value": 8845.0
+        },
+        {
+          "year": 2020,
+          "value": 8665.0
+        },
+        {
+          "year": 2021,
+          "value": 8650.0
+        },
+        {
+          "year": 2022,
+          "value": 9110.0
+        },
+        {
+          "year": 2023,
+          "value": 10130.0
+        },
+        {
+          "year": 2024,
+          "value": 11140.0
+        },
+        {
+          "year": 2025,
+          "value": 7705.0
+        }
+      ]
+    },
+    {
+      "disease": "demens",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 170.0
+        },
+        {
+          "year": 2011,
+          "value": 160.0
+        },
+        {
+          "year": 2012,
+          "value": 160.0
+        },
+        {
+          "year": 2013,
+          "value": 160.0
+        },
+        {
+          "year": 2014,
+          "value": 160.0
+        },
+        {
+          "year": 2015,
+          "value": 165.0
+        },
+        {
+          "year": 2016,
+          "value": 160.0
+        },
+        {
+          "year": 2017,
+          "value": 160.0
+        },
+        {
+          "year": 2018,
+          "value": 145.0
+        },
+        {
+          "year": 2019,
+          "value": 150.0
+        },
+        {
+          "year": 2020,
+          "value": 150.0
+        },
+        {
+          "year": 2021,
+          "value": 150.0
+        },
+        {
+          "year": 2022,
+          "value": 155.0
+        },
+        {
+          "year": 2023,
+          "value": 170.0
+        },
+        {
+          "year": 2024,
+          "value": 185.0
+        },
+        {
+          "year": 2025,
+          "value": 130.0
+        }
+      ]
+    },
+    {
+      "disease": "hjertesvigt",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 11425.0
+        },
+        {
+          "year": 2011,
+          "value": 11260.0
+        },
+        {
+          "year": 2012,
+          "value": 11465.0
+        },
+        {
+          "year": 2013,
+          "value": 11665.0
+        },
+        {
+          "year": 2014,
+          "value": 11500.0
+        },
+        {
+          "year": 2015,
+          "value": 11855.0
+        },
+        {
+          "year": 2016,
+          "value": 11640.0
+        },
+        {
+          "year": 2017,
+          "value": 11125.0
+        },
+        {
+          "year": 2018,
+          "value": 10455.0
+        },
+        {
+          "year": 2019,
+          "value": 11385.0
+        },
+        {
+          "year": 2020,
+          "value": 10680.0
+        },
+        {
+          "year": 2021,
+          "value": 11000.0
+        },
+        {
+          "year": 2022,
+          "value": 11030.0
+        },
+        {
+          "year": 2023,
+          "value": 10910.0
+        },
+        {
+          "year": 2024,
+          "value": 10885.0
+        },
+        {
+          "year": 2025,
+          "value": 8150.0
+        }
+      ]
+    },
+    {
+      "disease": "hjertesvigt",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 205.0
+        },
+        {
+          "year": 2011,
+          "value": 200.0
+        },
+        {
+          "year": 2012,
+          "value": 205.0
+        },
+        {
+          "year": 2013,
+          "value": 210.0
+        },
+        {
+          "year": 2014,
+          "value": 205.0
+        },
+        {
+          "year": 2015,
+          "value": 210.0
+        },
+        {
+          "year": 2016,
+          "value": 205.0
+        },
+        {
+          "year": 2017,
+          "value": 195.0
+        },
+        {
+          "year": 2018,
+          "value": 180.0
+        },
+        {
+          "year": 2019,
+          "value": 195.0
+        },
+        {
+          "year": 2020,
+          "value": 185.0
+        },
+        {
+          "year": 2021,
+          "value": 190.0
+        },
+        {
+          "year": 2022,
+          "value": 185.0
+        },
+        {
+          "year": 2023,
+          "value": 185.0
+        },
+        {
+          "year": 2024,
+          "value": 180.0
+        },
+        {
+          "year": 2025,
+          "value": 135.0
+        }
+      ]
+    },
+    {
+      "disease": "KOL",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 19990.0
+        },
+        {
+          "year": 2011,
+          "value": 20225.0
+        },
+        {
+          "year": 2012,
+          "value": 19745.0
+        },
+        {
+          "year": 2013,
+          "value": 18740.0
+        },
+        {
+          "year": 2014,
+          "value": 19500.0
+        },
+        {
+          "year": 2015,
+          "value": 20765.0
+        },
+        {
+          "year": 2016,
+          "value": 19715.0
+        },
+        {
+          "year": 2017,
+          "value": 18985.0
+        },
+        {
+          "year": 2018,
+          "value": 17990.0
+        },
+        {
+          "year": 2019,
+          "value": 17690.0
+        },
+        {
+          "year": 2020,
+          "value": 13685.0
+        },
+        {
+          "year": 2021,
+          "value": 13795.0
+        },
+        {
+          "year": 2022,
+          "value": 14775.0
+        },
+        {
+          "year": 2023,
+          "value": 15505.0
+        },
+        {
+          "year": 2024,
+          "value": 15350.0
+        },
+        {
+          "year": 2025,
+          "value": 10410.0
+        }
+      ]
+    },
+    {
+      "disease": "KOL",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 360.0
+        },
+        {
+          "year": 2011,
+          "value": 365.0
+        },
+        {
+          "year": 2012,
+          "value": 355.0
+        },
+        {
+          "year": 2013,
+          "value": 335.0
+        },
+        {
+          "year": 2014,
+          "value": 345.0
+        },
+        {
+          "year": 2015,
+          "value": 365.0
+        },
+        {
+          "year": 2016,
+          "value": 345.0
+        },
+        {
+          "year": 2017,
+          "value": 330.0
+        },
+        {
+          "year": 2018,
+          "value": 310.0
+        },
+        {
+          "year": 2019,
+          "value": 305.0
+        },
+        {
+          "year": 2020,
+          "value": 235.0
+        },
+        {
+          "year": 2021,
+          "value": 235.0
+        },
+        {
+          "year": 2022,
+          "value": 250.0
+        },
+        {
+          "year": 2023,
+          "value": 260.0
+        },
+        {
+          "year": 2024,
+          "value": 255.0
+        },
+        {
+          "year": 2025,
+          "value": 175.0
+        }
+      ]
+    },
+    {
+      "disease": "leddegigt",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 3875.0
+        },
+        {
+          "year": 2011,
+          "value": 3980.0
+        },
+        {
+          "year": 2012,
+          "value": 3860.0
+        },
+        {
+          "year": 2013,
+          "value": 3820.0
+        },
+        {
+          "year": 2014,
+          "value": 3630.0
+        },
+        {
+          "year": 2015,
+          "value": 3750.0
+        },
+        {
+          "year": 2016,
+          "value": 3380.0
+        },
+        {
+          "year": 2017,
+          "value": 3030.0
+        },
+        {
+          "year": 2018,
+          "value": 2860.0
+        },
+        {
+          "year": 2019,
+          "value": 3105.0
+        },
+        {
+          "year": 2020,
+          "value": 2850.0
+        },
+        {
+          "year": 2021,
+          "value": 3155.0
+        },
+        {
+          "year": 2022,
+          "value": 3025.0
+        },
+        {
+          "year": 2023,
+          "value": 2810.0
+        },
+        {
+          "year": 2024,
+          "value": 2960.0
+        },
+        {
+          "year": 2025,
+          "value": 1995.0
+        }
+      ]
+    },
+    {
+      "disease": "leddegigt",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 70.0
+        },
+        {
+          "year": 2011,
+          "value": 70.0
+        },
+        {
+          "year": 2012,
+          "value": 70.0
+        },
+        {
+          "year": 2013,
+          "value": 70.0
+        },
+        {
+          "year": 2014,
+          "value": 65.0
+        },
+        {
+          "year": 2015,
+          "value": 65.0
+        },
+        {
+          "year": 2016,
+          "value": 60.0
+        },
+        {
+          "year": 2017,
+          "value": 55.0
+        },
+        {
+          "year": 2018,
+          "value": 50.0
+        },
+        {
+          "year": 2019,
+          "value": 55.0
+        },
+        {
+          "year": 2020,
+          "value": 50.0
+        },
+        {
+          "year": 2021,
+          "value": 55.0
+        },
+        {
+          "year": 2022,
+          "value": 50.0
+        },
+        {
+          "year": 2023,
+          "value": 45.0
+        },
+        {
+          "year": 2024,
+          "value": 50.0
+        },
+        {
+          "year": 2025,
+          "value": 35.0
+        }
+      ]
+    },
+    {
+      "disease": "osteoporose",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 18510.0
+        },
+        {
+          "year": 2011,
+          "value": 20055.0
+        },
+        {
+          "year": 2012,
+          "value": 19265.0
+        },
+        {
+          "year": 2013,
+          "value": 18415.0
+        },
+        {
+          "year": 2014,
+          "value": 17665.0
+        },
+        {
+          "year": 2015,
+          "value": 18280.0
+        },
+        {
+          "year": 2016,
+          "value": 17900.0
+        },
+        {
+          "year": 2017,
+          "value": 17600.0
+        },
+        {
+          "year": 2018,
+          "value": 17145.0
+        },
+        {
+          "year": 2019,
+          "value": 18845.0
+        },
+        {
+          "year": 2020,
+          "value": 17625.0
+        },
+        {
+          "year": 2021,
+          "value": 18875.0
+        },
+        {
+          "year": 2022,
+          "value": 20270.0
+        },
+        {
+          "year": 2023,
+          "value": 24445.0
+        },
+        {
+          "year": 2024,
+          "value": 25160.0
+        },
+        {
+          "year": 2025,
+          "value": 16330.0
+        }
+      ]
+    },
+    {
+      "disease": "osteoporose",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 335.0
+        },
+        {
+          "year": 2011,
+          "value": 360.0
+        },
+        {
+          "year": 2012,
+          "value": 345.0
+        },
+        {
+          "year": 2013,
+          "value": 330.0
+        },
+        {
+          "year": 2014,
+          "value": 315.0
+        },
+        {
+          "year": 2015,
+          "value": 320.0
+        },
+        {
+          "year": 2016,
+          "value": 315.0
+        },
+        {
+          "year": 2017,
+          "value": 305.0
+        },
+        {
+          "year": 2018,
+          "value": 295.0
+        },
+        {
+          "year": 2019,
+          "value": 325.0
+        },
+        {
+          "year": 2020,
+          "value": 305.0
+        },
+        {
+          "year": 2021,
+          "value": 325.0
+        },
+        {
+          "year": 2022,
+          "value": 345.0
+        },
+        {
+          "year": 2023,
+          "value": 410.0
+        },
+        {
+          "year": 2024,
+          "value": 420.0
+        },
+        {
+          "year": 2025,
+          "value": 270.0
+        }
+      ]
+    },
+    {
+      "disease": "skizofreni",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 1605.0
+        },
+        {
+          "year": 2011,
+          "value": 1680.0
+        },
+        {
+          "year": 2012,
+          "value": 1740.0
+        },
+        {
+          "year": 2013,
+          "value": 1730.0
+        },
+        {
+          "year": 2014,
+          "value": 1580.0
+        },
+        {
+          "year": 2015,
+          "value": 1620.0
+        },
+        {
+          "year": 2016,
+          "value": 1540.0
+        },
+        {
+          "year": 2017,
+          "value": 1585.0
+        },
+        {
+          "year": 2018,
+          "value": 1310.0
+        },
+        {
+          "year": 2019,
+          "value": 1585.0
+        },
+        {
+          "year": 2020,
+          "value": 1370.0
+        },
+        {
+          "year": 2021,
+          "value": 1385.0
+        },
+        {
+          "year": 2022,
+          "value": 1375.0
+        },
+        {
+          "year": 2023,
+          "value": 1415.0
+        },
+        {
+          "year": 2024,
+          "value": 1420.0
+        },
+        {
+          "year": 2025,
+          "value": 930.0
+        }
+      ]
+    },
+    {
+      "disease": "skizofreni",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 30.0
+        },
+        {
+          "year": 2011,
+          "value": 30.0
+        },
+        {
+          "year": 2012,
+          "value": 30.0
+        },
+        {
+          "year": 2013,
+          "value": 30.0
+        },
+        {
+          "year": 2014,
+          "value": 30.0
+        },
+        {
+          "year": 2015,
+          "value": 30.0
+        },
+        {
+          "year": 2016,
+          "value": 25.0
+        },
+        {
+          "year": 2017,
+          "value": 25.0
+        },
+        {
+          "year": 2018,
+          "value": 25.0
+        },
+        {
+          "year": 2019,
+          "value": 25.0
+        },
+        {
+          "year": 2020,
+          "value": 25.0
+        },
+        {
+          "year": 2021,
+          "value": 25.0
+        },
+        {
+          "year": 2022,
+          "value": 25.0
+        },
+        {
+          "year": 2023,
+          "value": 25.0
+        },
+        {
+          "year": 2024,
+          "value": 25.0
+        },
+        {
+          "year": 2025,
+          "value": 15.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 1 - Diabetes",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 2160.0
+        },
+        {
+          "year": 2011,
+          "value": 2005.0
+        },
+        {
+          "year": 2012,
+          "value": 1860.0
+        },
+        {
+          "year": 2013,
+          "value": 2050.0
+        },
+        {
+          "year": 2014,
+          "value": 1820.0
+        },
+        {
+          "year": 2015,
+          "value": 1870.0
+        },
+        {
+          "year": 2016,
+          "value": 1920.0
+        },
+        {
+          "year": 2017,
+          "value": 1930.0
+        },
+        {
+          "year": 2018,
+          "value": 1805.0
+        },
+        {
+          "year": 2019,
+          "value": 2050.0
+        },
+        {
+          "year": 2020,
+          "value": 1825.0
+        },
+        {
+          "year": 2021,
+          "value": 1885.0
+        },
+        {
+          "year": 2022,
+          "value": 1815.0
+        },
+        {
+          "year": 2023,
+          "value": 1730.0
+        },
+        {
+          "year": 2024,
+          "value": 1635.0
+        },
+        {
+          "year": 2025,
+          "value": 1245.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 1 - Diabetes",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 40.0
+        },
+        {
+          "year": 2011,
+          "value": 35.0
+        },
+        {
+          "year": 2012,
+          "value": 35.0
+        },
+        {
+          "year": 2013,
+          "value": 35.0
+        },
+        {
+          "year": 2014,
+          "value": 30.0
+        },
+        {
+          "year": 2015,
+          "value": 35.0
+        },
+        {
+          "year": 2016,
+          "value": 35.0
+        },
+        {
+          "year": 2017,
+          "value": 35.0
+        },
+        {
+          "year": 2018,
+          "value": 30.0
+        },
+        {
+          "year": 2019,
+          "value": 35.0
+        },
+        {
+          "year": 2020,
+          "value": 30.0
+        },
+        {
+          "year": 2021,
+          "value": 30.0
+        },
+        {
+          "year": 2022,
+          "value": 30.0
+        },
+        {
+          "year": 2023,
+          "value": 30.0
+        },
+        {
+          "year": 2024,
+          "value": 25.0
+        },
+        {
+          "year": 2025,
+          "value": 20.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 2 - Diabetes",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 21735.0
+        },
+        {
+          "year": 2011,
+          "value": 24560.0
+        },
+        {
+          "year": 2012,
+          "value": 22970.0
+        },
+        {
+          "year": 2013,
+          "value": 17800.0
+        },
+        {
+          "year": 2014,
+          "value": 15680.0
+        },
+        {
+          "year": 2015,
+          "value": 16420.0
+        },
+        {
+          "year": 2016,
+          "value": 18220.0
+        },
+        {
+          "year": 2017,
+          "value": 17760.0
+        },
+        {
+          "year": 2018,
+          "value": 16940.0
+        },
+        {
+          "year": 2019,
+          "value": 17175.0
+        },
+        {
+          "year": 2020,
+          "value": 18580.0
+        },
+        {
+          "year": 2021,
+          "value": 21700.0
+        },
+        {
+          "year": 2022,
+          "value": 21980.0
+        },
+        {
+          "year": 2023,
+          "value": 22260.0
+        },
+        {
+          "year": 2024,
+          "value": 20425.0
+        },
+        {
+          "year": 2025,
+          "value": 13950.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 2 - Diabetes",
+      "measure_code": "incidence",
+      "measure_label": "Incidens (nye sygdomstilfælde)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 390.0
+        },
+        {
+          "year": 2011,
+          "value": 440.0
+        },
+        {
+          "year": 2012,
+          "value": 410.0
+        },
+        {
+          "year": 2013,
+          "value": 315.0
+        },
+        {
+          "year": 2014,
+          "value": 280.0
+        },
+        {
+          "year": 2015,
+          "value": 290.0
+        },
+        {
+          "year": 2016,
+          "value": 320.0
+        },
+        {
+          "year": 2017,
+          "value": 310.0
+        },
+        {
+          "year": 2018,
+          "value": 295.0
+        },
+        {
+          "year": 2019,
+          "value": 295.0
+        },
+        {
+          "year": 2020,
+          "value": 320.0
+        },
+        {
+          "year": 2021,
+          "value": 370.0
+        },
+        {
+          "year": 2022,
+          "value": 370.0
+        },
+        {
+          "year": 2023,
+          "value": 375.0
+        },
+        {
+          "year": 2024,
+          "value": 340.0
+        },
+        {
+          "year": 2025,
+          "value": 230.0
+        }
+      ]
+    },
+    {
+      "disease": "astma",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 375270.0
+        },
+        {
+          "year": 2011,
+          "value": 389810.0
+        },
+        {
+          "year": 2012,
+          "value": 398270.0
+        },
+        {
+          "year": 2013,
+          "value": 401520.0
+        },
+        {
+          "year": 2014,
+          "value": 399825.0
+        },
+        {
+          "year": 2015,
+          "value": 397745.0
+        },
+        {
+          "year": 2016,
+          "value": 398650.0
+        },
+        {
+          "year": 2017,
+          "value": 397895.0
+        },
+        {
+          "year": 2018,
+          "value": 397445.0
+        },
+        {
+          "year": 2019,
+          "value": 396345.0
+        },
+        {
+          "year": 2020,
+          "value": 399420.0
+        },
+        {
+          "year": 2021,
+          "value": 402535.0
+        },
+        {
+          "year": 2022,
+          "value": 404305.0
+        },
+        {
+          "year": 2023,
+          "value": 408235.0
+        },
+        {
+          "year": 2024,
+          "value": 415310.0
+        },
+        {
+          "year": 2025,
+          "value": 423385.0
+        }
+      ]
+    },
+    {
+      "disease": "astma",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 6770.0
+        },
+        {
+          "year": 2011,
+          "value": 7000.0
+        },
+        {
+          "year": 2012,
+          "value": 7130.0
+        },
+        {
+          "year": 2013,
+          "value": 7160.0
+        },
+        {
+          "year": 2014,
+          "value": 7090.0
+        },
+        {
+          "year": 2015,
+          "value": 7005.0
+        },
+        {
+          "year": 2016,
+          "value": 6965.0
+        },
+        {
+          "year": 2017,
+          "value": 6905.0
+        },
+        {
+          "year": 2018,
+          "value": 6865.0
+        },
+        {
+          "year": 2019,
+          "value": 6815.0
+        },
+        {
+          "year": 2020,
+          "value": 6855.0
+        },
+        {
+          "year": 2021,
+          "value": 6880.0
+        },
+        {
+          "year": 2022,
+          "value": 6840.0
+        },
+        {
+          "year": 2023,
+          "value": 6870.0
+        },
+        {
+          "year": 2024,
+          "value": 6955.0
+        },
+        {
+          "year": 2025,
+          "value": 7055.0
+        }
+      ]
+    },
+    {
+      "disease": "demens",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 38760.0
+        },
+        {
+          "year": 2011,
+          "value": 39495.0
+        },
+        {
+          "year": 2012,
+          "value": 39810.0
+        },
+        {
+          "year": 2013,
+          "value": 40160.0
+        },
+        {
+          "year": 2014,
+          "value": 40380.0
+        },
+        {
+          "year": 2015,
+          "value": 41270.0
+        },
+        {
+          "year": 2016,
+          "value": 41920.0
+        },
+        {
+          "year": 2017,
+          "value": 42285.0
+        },
+        {
+          "year": 2018,
+          "value": 42680.0
+        },
+        {
+          "year": 2019,
+          "value": 42060.0
+        },
+        {
+          "year": 2020,
+          "value": 42280.0
+        },
+        {
+          "year": 2021,
+          "value": 42230.0
+        },
+        {
+          "year": 2022,
+          "value": 41690.0
+        },
+        {
+          "year": 2023,
+          "value": 41635.0
+        },
+        {
+          "year": 2024,
+          "value": 43105.0
+        },
+        {
+          "year": 2025,
+          "value": 45455.0
+        }
+      ]
+    },
+    {
+      "disease": "demens",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 700.0
+        },
+        {
+          "year": 2011,
+          "value": 710.0
+        },
+        {
+          "year": 2012,
+          "value": 715.0
+        },
+        {
+          "year": 2013,
+          "value": 715.0
+        },
+        {
+          "year": 2014,
+          "value": 715.0
+        },
+        {
+          "year": 2015,
+          "value": 725.0
+        },
+        {
+          "year": 2016,
+          "value": 730.0
+        },
+        {
+          "year": 2017,
+          "value": 735.0
+        },
+        {
+          "year": 2018,
+          "value": 735.0
+        },
+        {
+          "year": 2019,
+          "value": 725.0
+        },
+        {
+          "year": 2020,
+          "value": 725.0
+        },
+        {
+          "year": 2021,
+          "value": 720.0
+        },
+        {
+          "year": 2022,
+          "value": 705.0
+        },
+        {
+          "year": 2023,
+          "value": 700.0
+        },
+        {
+          "year": 2024,
+          "value": 720.0
+        },
+        {
+          "year": 2025,
+          "value": 755.0
+        }
+      ]
+    },
+    {
+      "disease": "hjertesvigt",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 60595.0
+        },
+        {
+          "year": 2011,
+          "value": 60830.0
+        },
+        {
+          "year": 2012,
+          "value": 61270.0
+        },
+        {
+          "year": 2013,
+          "value": 61725.0
+        },
+        {
+          "year": 2014,
+          "value": 62730.0
+        },
+        {
+          "year": 2015,
+          "value": 63795.0
+        },
+        {
+          "year": 2016,
+          "value": 65015.0
+        },
+        {
+          "year": 2017,
+          "value": 66205.0
+        },
+        {
+          "year": 2018,
+          "value": 66680.0
+        },
+        {
+          "year": 2019,
+          "value": 66545.0
+        },
+        {
+          "year": 2020,
+          "value": 67775.0
+        },
+        {
+          "year": 2021,
+          "value": 68220.0
+        },
+        {
+          "year": 2022,
+          "value": 68480.0
+        },
+        {
+          "year": 2023,
+          "value": 68680.0
+        },
+        {
+          "year": 2024,
+          "value": 69110.0
+        },
+        {
+          "year": 2025,
+          "value": 69750.0
+        }
+      ]
+    },
+    {
+      "disease": "hjertesvigt",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 1095.0
+        },
+        {
+          "year": 2011,
+          "value": 1095.0
+        },
+        {
+          "year": 2012,
+          "value": 1095.0
+        },
+        {
+          "year": 2013,
+          "value": 1100.0
+        },
+        {
+          "year": 2014,
+          "value": 1110.0
+        },
+        {
+          "year": 2015,
+          "value": 1125.0
+        },
+        {
+          "year": 2016,
+          "value": 1135.0
+        },
+        {
+          "year": 2017,
+          "value": 1150.0
+        },
+        {
+          "year": 2018,
+          "value": 1150.0
+        },
+        {
+          "year": 2019,
+          "value": 1145.0
+        },
+        {
+          "year": 2020,
+          "value": 1165.0
+        },
+        {
+          "year": 2021,
+          "value": 1165.0
+        },
+        {
+          "year": 2022,
+          "value": 1160.0
+        },
+        {
+          "year": 2023,
+          "value": 1155.0
+        },
+        {
+          "year": 2024,
+          "value": 1155.0
+        },
+        {
+          "year": 2025,
+          "value": 1160.0
+        }
+      ]
+    },
+    {
+      "disease": "KOL",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 104335.0
+        },
+        {
+          "year": 2011,
+          "value": 112775.0
+        },
+        {
+          "year": 2012,
+          "value": 120860.0
+        },
+        {
+          "year": 2013,
+          "value": 128010.0
+        },
+        {
+          "year": 2014,
+          "value": 133970.0
+        },
+        {
+          "year": 2015,
+          "value": 140785.0
+        },
+        {
+          "year": 2016,
+          "value": 148215.0
+        },
+        {
+          "year": 2017,
+          "value": 153935.0
+        },
+        {
+          "year": 2018,
+          "value": 158020.0
+        },
+        {
+          "year": 2019,
+          "value": 161220.0
+        },
+        {
+          "year": 2020,
+          "value": 164185.0
+        },
+        {
+          "year": 2021,
+          "value": 163235.0
+        },
+        {
+          "year": 2022,
+          "value": 161260.0
+        },
+        {
+          "year": 2023,
+          "value": 159840.0
+        },
+        {
+          "year": 2024,
+          "value": 159325.0
+        },
+        {
+          "year": 2025,
+          "value": 159115.0
+        }
+      ]
+    },
+    {
+      "disease": "KOL",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 1880.0
+        },
+        {
+          "year": 2011,
+          "value": 2025.0
+        },
+        {
+          "year": 2012,
+          "value": 2165.0
+        },
+        {
+          "year": 2013,
+          "value": 2280.0
+        },
+        {
+          "year": 2014,
+          "value": 2375.0
+        },
+        {
+          "year": 2015,
+          "value": 2480.0
+        },
+        {
+          "year": 2016,
+          "value": 2590.0
+        },
+        {
+          "year": 2017,
+          "value": 2670.0
+        },
+        {
+          "year": 2018,
+          "value": 2730.0
+        },
+        {
+          "year": 2019,
+          "value": 2775.0
+        },
+        {
+          "year": 2020,
+          "value": 2820.0
+        },
+        {
+          "year": 2021,
+          "value": 2790.0
+        },
+        {
+          "year": 2022,
+          "value": 2730.0
+        },
+        {
+          "year": 2023,
+          "value": 2690.0
+        },
+        {
+          "year": 2024,
+          "value": 2670.0
+        },
+        {
+          "year": 2025,
+          "value": 2650.0
+        }
+      ]
+    },
+    {
+      "disease": "leddegigt",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 33815.0
+        },
+        {
+          "year": 2011,
+          "value": 35970.0
+        },
+        {
+          "year": 2012,
+          "value": 38180.0
+        },
+        {
+          "year": 2013,
+          "value": 40255.0
+        },
+        {
+          "year": 2014,
+          "value": 42240.0
+        },
+        {
+          "year": 2015,
+          "value": 43815.0
+        },
+        {
+          "year": 2016,
+          "value": 45215.0
+        },
+        {
+          "year": 2017,
+          "value": 46005.0
+        },
+        {
+          "year": 2018,
+          "value": 46485.0
+        },
+        {
+          "year": 2019,
+          "value": 46475.0
+        },
+        {
+          "year": 2020,
+          "value": 46670.0
+        },
+        {
+          "year": 2021,
+          "value": 46555.0
+        },
+        {
+          "year": 2022,
+          "value": 46365.0
+        },
+        {
+          "year": 2023,
+          "value": 45885.0
+        },
+        {
+          "year": 2024,
+          "value": 45130.0
+        },
+        {
+          "year": 2025,
+          "value": 44790.0
+        }
+      ]
+    },
+    {
+      "disease": "leddegigt",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 610.0
+        },
+        {
+          "year": 2011,
+          "value": 645.0
+        },
+        {
+          "year": 2012,
+          "value": 685.0
+        },
+        {
+          "year": 2013,
+          "value": 720.0
+        },
+        {
+          "year": 2014,
+          "value": 750.0
+        },
+        {
+          "year": 2015,
+          "value": 770.0
+        },
+        {
+          "year": 2016,
+          "value": 790.0
+        },
+        {
+          "year": 2017,
+          "value": 800.0
+        },
+        {
+          "year": 2018,
+          "value": 805.0
+        },
+        {
+          "year": 2019,
+          "value": 800.0
+        },
+        {
+          "year": 2020,
+          "value": 800.0
+        },
+        {
+          "year": 2021,
+          "value": 795.0
+        },
+        {
+          "year": 2022,
+          "value": 785.0
+        },
+        {
+          "year": 2023,
+          "value": 770.0
+        },
+        {
+          "year": 2024,
+          "value": 755.0
+        },
+        {
+          "year": 2025,
+          "value": 745.0
+        }
+      ]
+    },
+    {
+      "disease": "osteoporose",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 114250.0
+        },
+        {
+          "year": 2011,
+          "value": 123960.0
+        },
+        {
+          "year": 2012,
+          "value": 134915.0
+        },
+        {
+          "year": 2013,
+          "value": 144250.0
+        },
+        {
+          "year": 2014,
+          "value": 152175.0
+        },
+        {
+          "year": 2015,
+          "value": 159130.0
+        },
+        {
+          "year": 2016,
+          "value": 165790.0
+        },
+        {
+          "year": 2017,
+          "value": 172200.0
+        },
+        {
+          "year": 2018,
+          "value": 177790.0
+        },
+        {
+          "year": 2019,
+          "value": 182230.0
+        },
+        {
+          "year": 2020,
+          "value": 188110.0
+        },
+        {
+          "year": 2021,
+          "value": 192580.0
+        },
+        {
+          "year": 2022,
+          "value": 197015.0
+        },
+        {
+          "year": 2023,
+          "value": 201385.0
+        },
+        {
+          "year": 2024,
+          "value": 210280.0
+        },
+        {
+          "year": 2025,
+          "value": 220145.0
+        }
+      ]
+    },
+    {
+      "disease": "osteoporose",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 2060.0
+        },
+        {
+          "year": 2011,
+          "value": 2225.0
+        },
+        {
+          "year": 2012,
+          "value": 2415.0
+        },
+        {
+          "year": 2013,
+          "value": 2570.0
+        },
+        {
+          "year": 2014,
+          "value": 2700.0
+        },
+        {
+          "year": 2015,
+          "value": 2800.0
+        },
+        {
+          "year": 2016,
+          "value": 2895.0
+        },
+        {
+          "year": 2017,
+          "value": 2990.0
+        },
+        {
+          "year": 2018,
+          "value": 3070.0
+        },
+        {
+          "year": 2019,
+          "value": 3135.0
+        },
+        {
+          "year": 2020,
+          "value": 3230.0
+        },
+        {
+          "year": 2021,
+          "value": 3290.0
+        },
+        {
+          "year": 2022,
+          "value": 3335.0
+        },
+        {
+          "year": 2023,
+          "value": 3390.0
+        },
+        {
+          "year": 2024,
+          "value": 3520.0
+        },
+        {
+          "year": 2025,
+          "value": 3670.0
+        }
+      ]
+    },
+    {
+      "disease": "skizofreni",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 23440.0
+        },
+        {
+          "year": 2011,
+          "value": 24180.0
+        },
+        {
+          "year": 2012,
+          "value": 24970.0
+        },
+        {
+          "year": 2013,
+          "value": 25775.0
+        },
+        {
+          "year": 2014,
+          "value": 26525.0
+        },
+        {
+          "year": 2015,
+          "value": 27060.0
+        },
+        {
+          "year": 2016,
+          "value": 27660.0
+        },
+        {
+          "year": 2017,
+          "value": 28115.0
+        },
+        {
+          "year": 2018,
+          "value": 28500.0
+        },
+        {
+          "year": 2019,
+          "value": 28605.0
+        },
+        {
+          "year": 2020,
+          "value": 28905.0
+        },
+        {
+          "year": 2021,
+          "value": 28985.0
+        },
+        {
+          "year": 2022,
+          "value": 29055.0
+        },
+        {
+          "year": 2023,
+          "value": 29055.0
+        },
+        {
+          "year": 2024,
+          "value": 29135.0
+        },
+        {
+          "year": 2025,
+          "value": 29170.0
+        }
+      ]
+    },
+    {
+      "disease": "skizofreni",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 425.0
+        },
+        {
+          "year": 2011,
+          "value": 435.0
+        },
+        {
+          "year": 2012,
+          "value": 445.0
+        },
+        {
+          "year": 2013,
+          "value": 460.0
+        },
+        {
+          "year": 2014,
+          "value": 470.0
+        },
+        {
+          "year": 2015,
+          "value": 475.0
+        },
+        {
+          "year": 2016,
+          "value": 485.0
+        },
+        {
+          "year": 2017,
+          "value": 490.0
+        },
+        {
+          "year": 2018,
+          "value": 490.0
+        },
+        {
+          "year": 2019,
+          "value": 490.0
+        },
+        {
+          "year": 2020,
+          "value": 495.0
+        },
+        {
+          "year": 2021,
+          "value": 495.0
+        },
+        {
+          "year": 2022,
+          "value": 490.0
+        },
+        {
+          "year": 2023,
+          "value": 490.0
+        },
+        {
+          "year": 2024,
+          "value": 490.0
+        },
+        {
+          "year": 2025,
+          "value": 485.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 1 - Diabetes",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 26180.0
+        },
+        {
+          "year": 2011,
+          "value": 26525.0
+        },
+        {
+          "year": 2012,
+          "value": 26660.0
+        },
+        {
+          "year": 2013,
+          "value": 26725.0
+        },
+        {
+          "year": 2014,
+          "value": 27010.0
+        },
+        {
+          "year": 2015,
+          "value": 27380.0
+        },
+        {
+          "year": 2016,
+          "value": 27790.0
+        },
+        {
+          "year": 2017,
+          "value": 28315.0
+        },
+        {
+          "year": 2018,
+          "value": 28815.0
+        },
+        {
+          "year": 2019,
+          "value": 29320.0
+        },
+        {
+          "year": 2020,
+          "value": 30045.0
+        },
+        {
+          "year": 2021,
+          "value": 30635.0
+        },
+        {
+          "year": 2022,
+          "value": 31255.0
+        },
+        {
+          "year": 2023,
+          "value": 31850.0
+        },
+        {
+          "year": 2024,
+          "value": 32325.0
+        },
+        {
+          "year": 2025,
+          "value": 32760.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 1 - Diabetes",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 470.0
+        },
+        {
+          "year": 2011,
+          "value": 475.0
+        },
+        {
+          "year": 2012,
+          "value": 475.0
+        },
+        {
+          "year": 2013,
+          "value": 475.0
+        },
+        {
+          "year": 2014,
+          "value": 480.0
+        },
+        {
+          "year": 2015,
+          "value": 480.0
+        },
+        {
+          "year": 2016,
+          "value": 485.0
+        },
+        {
+          "year": 2017,
+          "value": 490.0
+        },
+        {
+          "year": 2018,
+          "value": 500.0
+        },
+        {
+          "year": 2019,
+          "value": 505.0
+        },
+        {
+          "year": 2020,
+          "value": 515.0
+        },
+        {
+          "year": 2021,
+          "value": 525.0
+        },
+        {
+          "year": 2022,
+          "value": 530.0
+        },
+        {
+          "year": 2023,
+          "value": 535.0
+        },
+        {
+          "year": 2024,
+          "value": 540.0
+        },
+        {
+          "year": 2025,
+          "value": 545.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 2 - Diabetes",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "count",
+      "unit": "persons",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 166500.0
+        },
+        {
+          "year": 2011,
+          "value": 178925.0
+        },
+        {
+          "year": 2012,
+          "value": 194025.0
+        },
+        {
+          "year": 2013,
+          "value": 207305.0
+        },
+        {
+          "year": 2014,
+          "value": 215080.0
+        },
+        {
+          "year": 2015,
+          "value": 220595.0
+        },
+        {
+          "year": 2016,
+          "value": 226420.0
+        },
+        {
+          "year": 2017,
+          "value": 233695.0
+        },
+        {
+          "year": 2018,
+          "value": 239960.0
+        },
+        {
+          "year": 2019,
+          "value": 244755.0
+        },
+        {
+          "year": 2020,
+          "value": 249515.0
+        },
+        {
+          "year": 2021,
+          "value": 255555.0
+        },
+        {
+          "year": 2022,
+          "value": 263895.0
+        },
+        {
+          "year": 2023,
+          "value": 272340.0
+        },
+        {
+          "year": 2024,
+          "value": 280920.0
+        },
+        {
+          "year": 2025,
+          "value": 287995.0
+        }
+      ]
+    },
+    {
+      "disease": "Type 2 - Diabetes",
+      "measure_code": "prevalence",
+      "measure_label": "Prævalens (sygdomsforekomst)",
+      "value_kind": "rate",
+      "unit": "per_100k_population",
+      "standardization": "none",
+      "values": [
+        {
+          "year": 2010,
+          "value": 3005.0
+        },
+        {
+          "year": 2011,
+          "value": 3215.0
+        },
+        {
+          "year": 2012,
+          "value": 3475.0
+        },
+        {
+          "year": 2013,
+          "value": 3695.0
+        },
+        {
+          "year": 2014,
+          "value": 3815.0
+        },
+        {
+          "year": 2015,
+          "value": 3885.0
+        },
+        {
+          "year": 2016,
+          "value": 3955.0
+        },
+        {
+          "year": 2017,
+          "value": 4055.0
+        },
+        {
+          "year": 2018,
+          "value": 4145.0
+        },
+        {
+          "year": 2019,
+          "value": 4210.0
+        },
+        {
+          "year": 2020,
+          "value": 4285.0
+        },
+        {
+          "year": 2021,
+          "value": 4370.0
+        },
+        {
+          "year": 2022,
+          "value": 4465.0
+        },
+        {
+          "year": 2023,
+          "value": 4580.0
+        },
+        {
+          "year": 2024,
+          "value": 4705.0
+        },
+        {
+          "year": 2025,
+          "value": 4800.0
+        }
+      ]
+    }
+  ],
+  "source_row_count": 187639,
+  "observation_count": 2432172
+}

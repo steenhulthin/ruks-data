@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - methodology.qmd
+    - credits.qmd
   resources:
     - site/data/**
 
@@ -20,4 +24,3 @@ format:
     theme: cosmo
     toc: false
     css: styles.css
-

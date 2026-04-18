@@ -59,7 +59,9 @@ The current pipeline preserves empty workbook cells as missing values. A follow-
 ```bash
 uv sync
 uv run python scripts/run_pipeline.py
+uv run python scripts/smoke_test.py
 quarto render
+uv run python scripts/smoke_test.py --check-site
 ```
 
 `quarto render` requires a local Quarto installation. On Ubuntu, Quarto is typically not available as a standard `apt` package named `quarto`, so install it from the official Quarto downloads page or the official Linux tarball instructions:

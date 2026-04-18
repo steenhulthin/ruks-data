@@ -35,8 +35,14 @@ jobs:
       - name: Run pipeline
         run: uv run python scripts/run_pipeline.py
 
+      - name: Run data smoke tests
+        run: uv run python scripts/smoke_test.py
+
       - name: Render site
         run: quarto render
+
+      - name: Run site smoke tests
+        run: uv run python scripts/smoke_test.py --check-site
 
       - name: Check for changes
         id: changes

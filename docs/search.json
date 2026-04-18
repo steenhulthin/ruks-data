@@ -1,10 +1,24 @@
 [
   {
-    "objectID": "TODO.html",
-    "href": "TODO.html",
-    "title": "TODO",
+    "objectID": "credits.html",
+    "href": "credits.html",
+    "title": "Credits",
     "section": "",
-    "text": "TODO\n\nInvestigate suppression / missing-value rules in the RUKS workbook and downstream publication.\nConfirm whether blank cells in Hovedresultater are due to disclosure control / diskretionering rather than true zeros or unavailable source data.\nDecide how suppressed values should be represented in outputs: NULL, explicit suppression flag, or a display label for website use.\nCheck whether the relevant explanation can be extracted from the workbook, or whether it should be documented from external Sundhedsdatastyrelsen guidance."
+    "text": "Primary source workbook:\n\nRegister for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025\n\nPublisher:\n\nSundhedsdatastyrelsen\n\nRelated public guidance on small-cell suppression:\n\nBeskyttelse af sundhedsdata"
+  },
+  {
+    "objectID": "credits.html#source",
+    "href": "credits.html#source",
+    "title": "Credits",
+    "section": "",
+    "text": "Primary source workbook:\n\nRegister for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025\n\nPublisher:\n\nSundhedsdatastyrelsen\n\nRelated public guidance on small-cell suppression:\n\nBeskyttelse af sundhedsdata"
+  },
+  {
+    "objectID": "credits.html#project-note",
+    "href": "credits.html#project-note",
+    "title": "Credits",
+    "section": "Project Note",
+    "text": "Project Note\nThis repository republishes transformed public data and documentation to make the source easier to use. It is an independent open-source project and is not an official Sundhedsdatastyrelsen publication."
   },
   {
     "objectID": "index.html",
@@ -40,34 +54,6 @@
     "title": "RUKS Data",
     "section": "Notes On Missing Values",
     "text": "Notes On Missing Values\nThis publication contains many blank cells in small geographic and demographic slices. The current pipeline preserves those blanks as missing values rather than forcing 0. We expect that at least part of this pattern reflects disclosure control for small cells, but that interpretation should be verified against the source publication and related documentation."
-  },
-  {
-    "objectID": "artifacts/releases/release_notes.html",
-    "href": "artifacts/releases/release_notes.html",
-    "title": "Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS), 2010-2025",
-    "section": "",
-    "text": "Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS), 2010-2025\n\nSource release date: 28. november 2025\nSource SHA-256: 32df7b72adbef66734df2f8e56f4f1a14edee21546abefd9b90d0f0de3555576\nRows in Hovedresultater: 187,639\nObserved year-values: 2,432,172\n\nAssets in this release:\n\nruks_hovedresultater_long-2025-11-28.csv.gz\nruks_hovedresultater_long-2025-11-28.parquet\nruks-2025-11-28.sqlite"
-  },
-  {
-    "objectID": "credits.html",
-    "href": "credits.html",
-    "title": "Credits",
-    "section": "",
-    "text": "Primary source workbook:\n\nRegister for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025\n\nPublisher:\n\nSundhedsdatastyrelsen\n\nRelated public guidance on small-cell suppression:\n\nBeskyttelse af sundhedsdata"
-  },
-  {
-    "objectID": "credits.html#source",
-    "href": "credits.html#source",
-    "title": "Credits",
-    "section": "",
-    "text": "Primary source workbook:\n\nRegister for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025\n\nPublisher:\n\nSundhedsdatastyrelsen\n\nRelated public guidance on small-cell suppression:\n\nBeskyttelse af sundhedsdata"
-  },
-  {
-    "objectID": "credits.html#project-note",
-    "href": "credits.html#project-note",
-    "title": "Credits",
-    "section": "Project Note",
-    "text": "Project Note\nThis repository republishes transformed public data and documentation to make the source easier to use. It is an independent open-source project and is not an official Sundhedsdatastyrelsen publication."
   },
   {
     "objectID": "methodology.html",

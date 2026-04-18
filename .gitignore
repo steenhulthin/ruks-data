@@ -1,0 +1,10 @@
+.venv/
+.quarto/
+.codex
+__pycache__/
+.pytest_cache/
+*.pyc
+artifacts/
+downloads/
+dist/
+build/

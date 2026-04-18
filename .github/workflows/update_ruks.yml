@@ -1,0 +1,70 @@
+name: Update RUKS Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 2 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-ruks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run pipeline
+        run: uv run python scripts/run_pipeline.py
+
+      - name: Render site
+        run: quarto render
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push tracked files
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update RUKS data"
+          git push
+
+      - name: Publish release assets
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="$(cat artifacts/releases/release_tag.txt)"
+          title="$(cat artifacts/releases/release_title.txt)"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" artifacts/releases/assets/* --clobber
+          else
+            gh release create "$tag" artifacts/releases/assets/* --title "$title" --notes-file artifacts/releases/release_notes.md
+          fi

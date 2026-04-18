@@ -1,0 +1,38 @@
+:root {
+  --ruks-ink: #15253a;
+  --ruks-accent: #006b6b;
+  --ruks-soft: #eef6f3;
+  --ruks-warm: #f7efe5;
+}
+
+body {
+  background:
+    radial-gradient(circle at top right, rgba(0, 107, 107, 0.08), transparent 28%),
+    radial-gradient(circle at left 20%, rgba(196, 108, 45, 0.08), transparent 24%),
+    linear-gradient(180deg, #fbfcfd 0%, #f4f7f8 100%);
+  color: var(--ruks-ink);
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(21, 37, 58, 0.08);
+}
+
+.summary-card {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--ruks-soft), white);
+  border: 1px solid rgba(0, 107, 107, 0.12);
+  box-shadow: 0 16px 40px rgba(21, 37, 58, 0.08);
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--ruks-accent);
+}
+

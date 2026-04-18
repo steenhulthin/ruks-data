@@ -1,0 +1,34 @@
+---
+title: "Methodology"
+---
+
+## Scope
+
+The current pipeline processes the `Hovedresultater` worksheet from the public RUKS workbook.
+
+## Normalization
+
+Each populated year cell becomes one observation in a long-format fact table with:
+
+- measure
+- disease
+- geography level
+- region
+- municipality
+- sex
+- age group
+- value kind
+- standardization
+- year
+- value
+
+## Missing Data
+
+Blank cells in the workbook are preserved as missing and are not coerced to `0`.
+
+## Publication Strategy
+
+- small manifests and history logs are committed to Git
+- large artifacts are produced in `artifacts/` and intended for GitHub Releases
+- the Quarto site consumes small generated JSON summaries
+

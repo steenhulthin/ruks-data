@@ -1,0 +1,22 @@
+---
+title: "Credits"
+---
+
+## Source
+
+Primary source workbook:
+
+- [Register for Udvalgte Kroniske Sygdomme og Svære Psykiske Lidelser (RUKS) 2010-2025](https://cdn1.gopublic.dk/sundhedsdatastyrelsen/Media/638999138200017589/Register%20for%20Udvalgte%20Kroniske%20Sygdomme%20og%20Sv%C3%A6re%20Psykiske%20Lidelser%20(RUKS)%202010-2025%20(udgivet%2028.%20november%202025).XLSX)
+
+Publisher:
+
+- [Sundhedsdatastyrelsen](https://sundhedsdatastyrelsen.dk)
+
+Related public guidance on small-cell suppression:
+
+- [Beskyttelse af sundhedsdata](https://sundhedsdatastyrelsen.dk/borger/om-sundhedsdata/beskyttelse-af-sundhedsdata)
+
+## Project Note
+
+This repository republishes transformed public data and documentation to make the source easier to use. It is an independent open-source project and is not an official Sundhedsdatastyrelsen publication.
+

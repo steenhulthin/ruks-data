@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - site/data/**
+
+website:
+  title: "RUKS Data"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Overview
+      - href: methodology.qmd
+        text: Methodology
+      - href: credits.qmd
+        text: Credits
+
+format:
+  html:
+    theme: cosmo
+    toc: false
+    css: styles.css
+

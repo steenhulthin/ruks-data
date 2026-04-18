@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ruks-data"
+version = "0.1.0"
+description = "Open-source pipeline and publication site for RUKS data."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "openpyxl>=3.1.5",
+  "polars>=1.30.0",
+]
+
+[project.scripts]
+ruks-pipeline = "ruks_data.pipeline:main"
+
+[tool.uv]
+package = true
+

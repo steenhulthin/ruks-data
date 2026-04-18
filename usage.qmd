@@ -17,11 +17,9 @@ The links below are constructed from the latest generated release tag. They poin
 ```python
 import pandas as pd
 
-release_tag = "ruks-2025-11-28"
-date_part = release_tag.replace("ruks-", "")
 url = (
-    "https://github.com/steenhulthin/ruks-data/releases/download/"
-    f"{release_tag}/ruks_hovedresultater_long-{date_part}.csv.gz"
+    "https://github.com/steenhulthin/ruks-data/releases/latest/download/"
+    "ruks_hovedresultater_long.csv.gz"
 )
 
 df = pd.read_csv(url)
@@ -44,7 +42,7 @@ print(asthma[["year", "value"]].head())
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect("ruks-2025-11-28.sqlite")
+conn = sqlite3.connect("ruks.sqlite")
 
 sql = """
 select
@@ -80,20 +78,33 @@ Because the site is static, it does not load the full dataset into the browser. 
 
 <script>
 function buildAssetLinks(data) {
-  const base = `https://github.com/steenhulthin/ruks-data/releases/download/${data.release_tag}`;
+  const latestBase = "https://github.com/steenhulthin/ruks-data/releases/latest/download";
+  const versionedBase = `https://github.com/steenhulthin/ruks-data/releases/download/${data.release_tag}`;
   const datePart = data.release_tag.replace("ruks-", "");
   return [
     {
-      label: "Long CSV (.csv.gz)",
-      url: `${base}/ruks_hovedresultater_long-${datePart}.csv.gz`,
+      label: "Latest long CSV (.csv.gz)",
+      url: `${latestBase}/ruks_hovedresultater_long.csv.gz`,
     },
     {
-      label: "Long Parquet (.parquet)",
-      url: `${base}/ruks_hovedresultater_long-${datePart}.parquet`,
+      label: "Latest long Parquet (.parquet)",
+      url: `${latestBase}/ruks_hovedresultater_long.parquet`,
     },
     {
-      label: "SQLite (.sqlite)",
-      url: `${base}/ruks-${datePart}.sqlite`,
+      label: "Latest SQLite (.sqlite)",
+      url: `${latestBase}/ruks.sqlite`,
+    },
+    {
+      label: "Versioned long CSV (.csv.gz)",
+      url: `${versionedBase}/ruks_hovedresultater_long-${datePart}.csv.gz`,
+    },
+    {
+      label: "Versioned long Parquet (.parquet)",
+      url: `${versionedBase}/ruks_hovedresultater_long-${datePart}.parquet`,
+    },
+    {
+      label: "Versioned SQLite (.sqlite)",
+      url: `${versionedBase}/ruks-${datePart}.sqlite`,
     },
   ];
 }

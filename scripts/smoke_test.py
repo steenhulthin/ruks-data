@@ -42,6 +42,11 @@ def run_data_checks(repo_root: Path) -> None:
         require(artifact_path.exists(), f"Missing artifact: {artifact_path}")
         require(artifact_path.stat().st_size > 0, f"Artifact is empty: {artifact_path}")
 
+    for artifact_name in manifest.get("latest_artifacts", []):
+        artifact_path = repo_root / "artifacts" / "releases" / "assets" / artifact_name
+        require(artifact_path.exists(), f"Missing latest-alias artifact: {artifact_path}")
+        require(artifact_path.stat().st_size > 0, f"Latest-alias artifact is empty: {artifact_path}")
+
     sqlite_path = repo_root / "artifacts" / "releases" / "assets" / manifest["artifacts"][-1]
     connection = sqlite3.connect(sqlite_path)
     try:

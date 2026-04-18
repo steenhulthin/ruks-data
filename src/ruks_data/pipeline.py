@@ -312,6 +312,9 @@ def transform_hovedresultater(
     output_csv_gz = artifacts_root / "releases" / "assets" / f"ruks_hovedresultater_long-{metadata.source_release_date_iso}.csv.gz"
     output_parquet = artifacts_root / "releases" / "assets" / f"ruks_hovedresultater_long-{metadata.source_release_date_iso}.parquet"
     output_sqlite = artifacts_root / "releases" / "assets" / f"ruks-{metadata.source_release_date_iso}.sqlite"
+    latest_csv_gz = artifacts_root / "releases" / "assets" / "ruks_hovedresultater_long.csv.gz"
+    latest_parquet = artifacts_root / "releases" / "assets" / "ruks_hovedresultater_long.parquet"
+    latest_sqlite = artifacts_root / "releases" / "assets" / "ruks.sqlite"
     release_tag_path = artifacts_root / "releases" / "release_tag.txt"
     release_title_path = artifacts_root / "releases" / "release_title.txt"
     release_notes_path = artifacts_root / "releases" / "release_notes.md"
@@ -321,6 +324,9 @@ def transform_hovedresultater(
         output_csv_gz,
         output_parquet,
         output_sqlite,
+        latest_csv_gz,
+        latest_parquet,
+        latest_sqlite,
         release_tag_path,
         release_title_path,
         release_notes_path,
@@ -333,8 +339,13 @@ def transform_hovedresultater(
     output_csv_gz.unlink(missing_ok=True)
     output_parquet.unlink(missing_ok=True)
     output_sqlite.unlink(missing_ok=True)
+    latest_csv_gz.unlink(missing_ok=True)
+    latest_parquet.unlink(missing_ok=True)
+    latest_sqlite.unlink(missing_ok=True)
     output_sqlite.with_suffix(output_sqlite.suffix + "-shm").unlink(missing_ok=True)
     output_sqlite.with_suffix(output_sqlite.suffix + "-wal").unlink(missing_ok=True)
+    latest_sqlite.with_suffix(latest_sqlite.suffix + "-shm").unlink(missing_ok=True)
+    latest_sqlite.with_suffix(latest_sqlite.suffix + "-wal").unlink(missing_ok=True)
 
     connection = sqlite3.connect(output_sqlite)
     create_sqlite_schema(connection)
@@ -597,6 +608,10 @@ def transform_hovedresultater(
     temp_path.unlink(missing_ok=True)
     output_csv_temp.unlink(missing_ok=True)
 
+    shutil.copy2(output_csv_gz, latest_csv_gz)
+    shutil.copy2(output_parquet, latest_parquet)
+    shutil.copy2(output_sqlite, latest_sqlite)
+
     manifest = {
         "workbook_title": metadata.workbook_title,
         "source_release_date_text": metadata.source_release_date_text,
@@ -617,6 +632,11 @@ def transform_hovedresultater(
             output_csv_gz.name,
             output_parquet.name,
             output_sqlite.name,
+        ],
+        "latest_artifacts": [
+            latest_csv_gz.name,
+            latest_parquet.name,
+            latest_sqlite.name,
         ],
     }
 
@@ -664,6 +684,9 @@ def transform_hovedresultater(
             f"- `{output_csv_gz.name}`\n"
             f"- `{output_parquet.name}`\n"
             f"- `{output_sqlite.name}`\n"
+            f"- `{latest_csv_gz.name}`\n"
+            f"- `{latest_parquet.name}`\n"
+            f"- `{latest_sqlite.name}`\n"
         ),
         encoding="utf-8",
     )

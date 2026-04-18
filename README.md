@@ -29,6 +29,7 @@ To keep the repository practical to clone while still preserving change history:
 - site-facing JSON stays in Git
 - large generated artifacts are written to `artifacts/` and meant for GitHub Releases
 - Git history is preserved through manifests and `data/history/releases.csv`
+- each GitHub Release includes both versioned asset names and stable alias names for `releases/latest/download/...`
 
 This follows GitHub's repository and Pages guidance:
 
